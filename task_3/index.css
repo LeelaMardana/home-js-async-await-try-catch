@@ -1,0 +1,35 @@
+:root {
+    --list-item-text-color: white;
+    --list-item-counter-background: #D66786;
+    --list-item-background: #E3DEDC;
+}
+
+.data-container {
+    margin-left: 0;
+    list-style: none;
+    counter-reset: li;
+}
+.data-container li {
+    padding: 10px 0;
+    position: relative;
+    left: 1.5em;
+    margin-bottom: 0.75em;
+    padding-left: 1em;
+    background: var(--list-item-background);
+}
+.data-container li:before {
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1.5em;
+    width: 1.875em;
+    text-align: center;
+    color: var(--list-item-text-color);
+    font-weight: bold;
+    background: var(--list-item-counter-background);
+    border-bottom-left-radius: 70em;
+    border-top-left-radius: 70em;
+    counter-increment: li;
+    content: counter(li);
+}
